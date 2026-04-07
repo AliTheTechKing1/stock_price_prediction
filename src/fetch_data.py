@@ -7,4 +7,4 @@ df = df[["Close"]]
 df = df.ffill()
 print(df.isnull().sum())
 
-df.to_csv(".\data\AAPL.csv")
+df.to_csv("..\\data\\AAPL.csv")

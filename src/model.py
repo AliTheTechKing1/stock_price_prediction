@@ -22,8 +22,8 @@ model.compile(optimizer='adam', loss="mse")
 
 history = model.fit(
     X_train, y_train,
-    epochs=20,
-    batch_size=32,
+    epochs=60,
+    batch_size=64,
     validation_split=0.1
 )
 model.save("data/lstm_model.keras")

@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
-df = pd.read_csv("..\\data\\AAPL.csv", skiprows=2, index_col="Date" , parse_dates=True)
+df = pd.read_csv("data/AAPL.csv", skiprows=2, index_col="Date" , parse_dates=True)
 
 
 Scaler = MinMaxScaler()
@@ -24,6 +24,11 @@ y_train, y_test = y[:split], y[split:]
 print("X_train shape:", X_train.shape)
 print("X_test shape:", X_test.shape)
 
-import joblib
+#import joblib
 
-joblib.dump(Scaler, "..\\data\\scaler.pkl")
+#joblib.dump(Scaler, "..\\data\\scaler.pkl")
+
+np.save("data/X_train.npy", X_train)
+np.save("data/y_train.npy", y_train)
+np.save("data/X_test.npy", X_test)
+np.save("data/y_test.npy", y_test)

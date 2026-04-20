@@ -18,7 +18,7 @@ model = Sequential([
         
     ])
 
-model.compile(optimizer='adam', loss="mse")
+model.compile(optimizer='adam', loss='mse')
 
 history = model.fit(
     X_train, y_train,
